@@ -1,9 +1,9 @@
 var express = require('express');
 var fs= require('fs');
-var buf = new Buffer('Parviz');
 
-fs.readFileSync('index.html',buf);
-
+var buf=fs.readFileSync('index.html');
+console.log(buf);
+console.log(buf.toString());
 
 var app = express.createServer(express.logger());
 
